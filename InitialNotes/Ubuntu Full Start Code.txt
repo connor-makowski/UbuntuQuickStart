@@ -1,0 +1,129 @@
+#=================Start Terminal as root====================
+#=================Update and Install Packages====================
+apt update
+apt upgrade -y
+apt-get update
+apt install python3 -y
+apt install python3-pip -y
+
+
+
+
+
+#=================Open .bashrc file in emacs====================
+vi ~/.bashrc
+i #to enter edit mode
+#=================Copy to .bashrc file in home folder====================
+echo "# Add Git Profile" >> .bashrc
+echo "eval $(ssh-agent -s) &>/dev/null" >> .bashrc
+echo "ssh-add ~/.ssh/id_rsa &>/dev/null" >> .bashrc
+
+(use esc to exit editing mode and type :wq + enter to save/exit)
+
+
+
+
+#=================Create .bash_alias====================
+touch ~/.bash_aliases
+#=================Copy to .bash_aliases file in home folder====================
+echo "# Change Default Python to Python3" >> .bash_aliases
+echo "alias python=python3" >> .bash_aliases
+echo "alias pip=pip3" >> .bash_aliases
+echo "#Alias to Windows if on windows" >> .bash_aliases
+echo "alias winc="cd /mnt/c"" >> .bash_aliases
+echo "alias windev="cd /mnt/c/development"" >> .bash_aliases
+echo "#Quick Access to venv activation" >> .bash_aliases
+echo "alias vact="source ~/development/dev/bin/activate"" >> .bash_aliases
+
+(use esc to exit editing mode and type :wq + enter to save/exit)
+
+
+
+
+#=================NVM/Node====================
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+command -v nvm
+nvm install v8.11.3
+nvm install v10.8.0
+
+
+
+
+#=================Yarn====================
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+apt-get update && apt-get install yarn -y
+apt-get install --no-install-recommends yarn
+
+
+
+
+#=================DevelopmentDirectory====================
+mkdir ~/development
+cd ~/development
+python3 -m pip install virtualenv
+python3 -m virtualenv dev
+cd ~
+
+
+
+
+
+
+
+
+
+
+
+
+#=================Gurobi====================
+#Download Gurobi from Web and put in /opt
+#Get Licence From Web
+#Close out of all bash windows if in windows
+#Start Terminal as Root
+cd /opt
+tar xvzf gurobi8.0.1_linux64.tar.gz
+cd gurobi801/linux64/
+python3 setup.py install
+export PATH=$PATH:/opt/gurobi801/linux64/bin
+grbgetkey 024de380-a873-11e8-910e-0acd5117ffae #laptop linux#
+#Check Licence
+gurobi.sh
+
+#=================Open .bashrc file in vim====================
+cd ~
+vi .bashrc
+i #to enter editing mode
+
+#=================Copy to .bashrc file in home folder====================
+# Gurobi Path
+export GUROBI_HOME="/opt/gurobi801/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+
+(use esc to exit editing mode and type :wq + enter to save/exit)
+
+#=================Give full permission to user over user files====================
+chown -R conmak ~
+chmod -R 700 ~
+
+#=================Atom====================
+curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+apt-get update
+apt-get install atom
+
+#=================Generate Git Credentials====================
+#Start Terminal in USER mode
+ssh-keygen -t rsa -b 4096 -C "conmak@mit.edu"
+vi ~/.ssh/id_rsa.pub
+
+#=================Edit a file====================
+vi ~/.bashrc
+i #to enter edit mode
+(use esc to exit editing mode and type :wq + enter to save/exit)
+
+emacs ~/.bashrc
+(ctrl + x + c to exit and y to commit)
