@@ -1,12 +1,13 @@
 #!/bin/bash
-touch ~/StartLog.txt
-touch ~/.bash_aliases &>~/StartLog.txt
-./ShellScripts/UbuntuUpdate.sh &>~/StartLog.txt
-./ShellScripts/InstallPython.sh &>~/StartLog.txt
-./ShellScripts/MultiGit.sh &>~/StartLog.txt
-./ShellScripts/Python3Default.sh &>~/StartLog.txt
-./ShellScripts/VirtualenvQuickAccess.sh &>~/StartLog.txt
-./ShellScripts/InstallNVM.sh &>~/StartLog.txt
-./ShellScripts/InstallYarn.sh &>~/StartLog.txt
-./ShellScripts/InstallAtom.sh &>~/StartLog.txt
+
+# Basic Needs
+./Basics/QuickStartBasics.sh
+./Basics/PythonBasics.sh
+./Basics/NodeBasics.sh
+./Basics/AtomBasics.sh
+
+# Multi Git Setup
+./ShellScripts/Git/MultiGit.sh
+
+# Show Startlog
 nano ~/StartLog.txt

@@ -6,7 +6,7 @@
 ./Basics/NodeBasics.sh
 ./Basics/WSLBasics.sh
 
-# Git Setup
+# Multi Git Setup
 ./ShellScripts/Git/MultiGit.sh
 
 # Show Startlog
