@@ -1,0 +1,1 @@
+./ShellScripts/Helpers/InstallCurl.sh

@@ -1,4 +1,18 @@
 #!/bin/bash
+echo "Running Git Credential Setup."
+echo "Make sure you did not run this command as as super user (su, sudo)"
+echo ""
+echo "Did you run this command as any super user? (y/n)"
+read superuser
+
+if [ "$superuser" == "n" ];
+then
+  echo "Continuing with Git Setup"
+else
+  echo "Ending Setup. Run command as a normal user."
+  exit 1
+fi
+
 echo "Are you using multiple git accounts? (y/n)"
 read multigit
 

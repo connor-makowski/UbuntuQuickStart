@@ -1,3 +1,3 @@
-./ShellScripts/InstallPython.sh &>~/StartLog.txt
-./ShellScripts/Python3Default.sh &>~/StartLog.txt
-./ShellScripts/VirtualenvQuickAccess.sh &>~/StartLog.txt
+./ShellScripts/Python/InstallPython.sh &>~/StartLog.txt
+./ShellScripts/Python/Python3Default.sh &>~/StartLog.txt
+./ShellScripts/Python/VirtualenvQuickAccess.sh &>~/StartLog.txt

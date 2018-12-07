@@ -1,1 +1,1 @@
-./ShellScripts/WinQuickAccess.sh &>~/StartLog.txt
+./ShellScripts/WindowsSubsystemLinux/WinQuickAccess.sh &>~/StartLog.txt
