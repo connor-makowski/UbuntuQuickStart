@@ -32,6 +32,7 @@ then
   fi
 
   ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 4096 -C $email1
+  ./ShellScripts/Git/AutoGit.sh
 fi
 
 if [ "$multigit" == "y" ];
@@ -58,6 +59,10 @@ then
   ssh-keygen -f ~/.ssh/id_rsa_personal -t rsa -b 4096 -C $pemail1
   echo "Generating Work Key"
   ssh-keygen -f ~/.ssh/id_rsa_work -t rsa -b 4096 -C $wemail1
+  ./ShellScripts/Git/MultiGit.sh
 fi
 
-echo "To use your git credentials, you need to copy your public key(s) over to github in your personal section under the ssh tab. These keys can be found in ~/.ssh"
+echo "To use your git credentials, you need to copy your public key(s)"
+echo "over to github in your personal section under the ssh tab."
+echo "These keys can be found in ~/.ssh"
+exit 1

@@ -15,20 +15,6 @@ then
 
   if [ "$confirm" == "y" ];
   then
-    echo "Do you plan to use multiple Git Accounts? (y/n)"
-    echo "Enter anything else (or x) if you do not plan to use git."
-    read multigit
-    if [ "$multigit" == "y" ];
-    then
-      ./ShellScripts/Git/MultiGit.sh
-    else
-      if [ "$multigit" == "n" ];
-      then
-        ./ShellScripts/Git/AutoGit.sh
-      else
-        echo "No Git Shortcut added"
-      fi
-    fi
     echo "Running Server Quickstart"
     ./Presets/ServerStart.sh
   else
@@ -45,20 +31,6 @@ then
 
   if [ "$confirm" == "y" ];
   then
-    echo "Do you plan to use multiple Git Accounts? (y/n)"
-    echo "Enter anything else (or x) if you do not plan to use git."
-    read multigit
-    if [ "$multigit" == "y" ];
-    then
-      ./ShellScripts/Git/MultiGit.sh
-    else
-      if [ "$multigit" == "n" ];
-      then
-        ./ShellScripts/Git/AutoGit.sh
-      else
-        echo "No Git Shortcut added"
-      fi
-    fi
     echo "Running Ubuntu Quickstart"
     ./Presets/UbuntuStart.sh
   else
@@ -75,20 +47,6 @@ then
 
   if [ "$confirm" == "y" ];
   then
-    echo "Do you plan to use multiple Git Accounts? (y/n)"
-    echo "Enter anything else (or x) if you do not plan to use git."
-    read multigit
-    if [ "$multigit" == "y" ];
-    then
-      ./ShellScripts/Git/MultiGit.sh
-    else
-      if [ "$multigit" == "n" ];
-      then
-        ./ShellScripts/Git/AutoGit.sh
-      else
-        echo "No Git Shortcut added"
-      fi
-    fi
     echo "Running WSL Quickstart"
     ./Presets/WSLStart.sh
   else
@@ -105,20 +63,6 @@ then
 
   if [ "$confirm" == "y" ];
   then
-    echo "Do you plan to use multiple Git Accounts? (y/n)"
-    echo "Enter anything else (or x) if you do not plan to use git."
-    read multigit
-    if [ "$multigit" == "y" ];
-    then
-      ./ShellScripts/Git/MultiGit.sh
-    else
-      if [ "$multigit" == "n" ];
-      then
-        ./ShellScripts/Git/AutoGit.sh
-      else
-        echo "No Git Shortcut added"
-      fi
-    fi
     echo "Running Custom Start"
     ./Presets/CustomStart.sh
   else
@@ -131,10 +75,16 @@ fi
 if [ "$QSMod" == "5" ];
 then
   exit 1
-else
-  exit 1
 fi
 
-echo "Installation Complete!"
-echo "If you will be using git, make sure to run GitCredentials.sh next."
-echo "GitCredentials.sh should be run as a regular user and not super user."
+for i in 1 2 3 4; do
+  if [ "$QSMod" == "$i" ];
+  then
+    echo "Installation Complete!"
+    echo "If you will be using git, make sure to run GitCredentials.sh next."
+    exit 1
+  fi
+done
+echo "Invalid Input, Try Again."
+./QuickStart.sh
+exit 1
