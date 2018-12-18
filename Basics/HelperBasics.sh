@@ -1,1 +1,1 @@
-./ShellScripts/Helpers/InstallCurl.sh
+./ShellScripts/Helpers/InstallCurl.sh &>~/StartLog.txt

@@ -1,0 +1,4 @@
+To install WSL Linux Xenial (Ubuntu 16.04)
+lxrun /install
+
+To install WSL Linux Bionic (Ubuntu 18.04)
