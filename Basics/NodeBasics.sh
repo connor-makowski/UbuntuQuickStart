@@ -1,2 +1,2 @@
-./ShellScripts/NodeJS/InstallNVM.sh &>~/StartLog.txt
-./ShellScripts/NodeJS/InstallYarn.sh &>~/StartLog.txt
+./ShellScripts/NodeJS/InstallNVM.sh | tee -a ~/StartLog.txt
+./ShellScripts/NodeJS/InstallYarn.sh | tee -a ~/StartLog.txt

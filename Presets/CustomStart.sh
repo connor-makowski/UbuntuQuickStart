@@ -20,8 +20,8 @@ read Correct
 if [ "$Correct" == "y" ];
 then
   touch ~/StartLog.txt
-  echo "Custom Start Installation Starting" &>~/StartLog.txt
-  touch ~/.bash_aliases &>~/StartLog.txt
+  echo "Custom Start Installation Starting" | tee -a ~/StartLog.txt
+  touch ~/.bash_aliases | tee -a ~/StartLog.txt
   ./Basics/HelperBasics.sh
   if [ "$UpdateUbuntu" == "y" ];
   then

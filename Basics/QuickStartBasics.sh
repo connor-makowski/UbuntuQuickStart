@@ -1,1 +1,1 @@
-./ShellScripts/Ubuntu/UbuntuUpdate.sh &>~/StartLog.txt
+./ShellScripts/Ubuntu/UbuntuUpdate.sh | tee -a ~/StartLog.txt

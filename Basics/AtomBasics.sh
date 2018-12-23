@@ -1,1 +1,1 @@
-./ShellScripts/Editors/InstallAtom.sh &>~/StartLog.txt
+./ShellScripts/Editors/InstallAtom.sh | tee -a ~/StartLog.txt

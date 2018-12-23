@@ -1,1 +1,1 @@
-./ShellScripts/WindowsSubsystemLinux/WinQuickAccess.sh &>~/StartLog.txt
+./ShellScripts/WindowsSubsystemLinux/WinQuickAccess.sh | tee -a ~/StartLog.txt

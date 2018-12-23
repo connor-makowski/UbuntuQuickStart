@@ -1,7 +1,7 @@
 #!/bin/bash
 touch ~/StartLog.txt
-echo "Ubuntu Quickstart" &>~/StartLog.txt
-touch ~/.bash_aliases &>~/StartLog.txt
+echo "Ubuntu Quickstart" | tee -a ~/StartLog.txt
+touch ~/.bash_aliases | tee -a ~/StartLog.txt
 ./Basics/HelperBasics.sh
 ./Basics/QuickStartBasics.sh
 ./Basics/PythonBasics.sh
