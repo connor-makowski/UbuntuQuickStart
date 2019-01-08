@@ -17,6 +17,9 @@ read WSL
 echo "Setup Remote services for XRDP and SSH? (y/n)"
 read Remote
 
+echo "Setup postgresql and mysql? (y/n)"
+read Databases
+
 echo "Are all above Selections Correct? (y/n)"
 read Correct
 
@@ -49,6 +52,10 @@ then
   if [ "$Remote" == "y" ];
   then
     ./Basics/RemoteBasics.sh
+  fi
+  if [ "$Databases" == "y" ];
+  then
+    ./Basics/DatabaseBasics.sh
   fi
 else
   echo "Restarting Process."
