@@ -14,6 +14,9 @@ read Py36
 echo "Setup WSL Aliases? (y/n)"
 read WSL
 
+echo "Setup Remote services for XRDP and SSH? (y/n)"
+read Remote
+
 echo "Are all above Selections Correct? (y/n)"
 read Correct
 
@@ -42,6 +45,10 @@ then
   if [ "$WSL" == "y" ];
   then
     ./Basics/WSLBasics.sh
+  fi
+  if [ "$Remote" == "y" ];
+  then
+    ./Basics/RemoteBasics.sh
   fi
 else
   echo "Restarting Process."
