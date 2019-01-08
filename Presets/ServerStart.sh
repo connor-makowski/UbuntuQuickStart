@@ -8,3 +8,4 @@ touch ~/.bash_aliases | tee -a ~/StartLog.txt
 ./Basics/PythonBasics.sh
 ./Basics/NodeBasics.sh
 ./Basics/AtomBasics.sh
+./Basics/DatabaseBasics.sh
