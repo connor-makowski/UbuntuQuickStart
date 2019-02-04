@@ -12,7 +12,7 @@ Features
 Prerequisites
 -------------
 
-* A Functional Ubuntu System
+* A Functional Ubuntu 18.04 System
 
 
 How to Use

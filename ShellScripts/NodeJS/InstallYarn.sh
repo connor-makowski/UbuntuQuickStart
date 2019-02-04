@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Installing Yarn"
-sudo apt remove cmdtest -y
-sudo apt remove yarn -y
+sudo apt remove cmdtest -y || true
+sudo apt remove yarn -y || true
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update -y
