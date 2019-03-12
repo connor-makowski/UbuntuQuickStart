@@ -6,3 +6,4 @@ sudo apt-get install xclip -y
 
 echo "Installing Git"
 sudo apt-get install git -y
+git config --global core.filemode false
