@@ -3,12 +3,17 @@
 #Get Licence From Web
 #Close out of all bash windows if in windows
 #Start Terminal as Root
-cd /opt
-tar xvzf gurobi8.0.1_linux64.tar.gz
-cd gurobi801/linux64/
-python3 setup.py install
-export PATH=$PATH:/opt/gurobi801/linux64/bin
-grbgetkey {key pasted here}
+echo "What is your gurobi key?"
+read gurobikey
+
 ./AutoGurobi.sh
+export PATH=$PATH:/opt/gurobi810/linux64/bin
+
+cd /opt
+tar xvzf gurobi8.1.0_linux64.tar.gz
+
+#Apply Licence
+grbgetkey $gurobikey
+
 #Check Licence
-gurobi.sh
+# gurobi.sh
