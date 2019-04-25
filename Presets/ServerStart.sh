@@ -10,3 +10,4 @@ touch ~/.bash_aliases | tee -a ~/StartLog.txt
 ./Basics/AtomBasics.sh
 ./Basics/DatabaseBasics.sh
 ./Basics/AliasBasics.sh
+./Basics/MitBasics.sh

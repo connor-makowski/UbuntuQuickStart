@@ -20,6 +20,9 @@ read Remote
 echo "Setup postgresql and mysql? (y/n)"
 read Databases
 
+echo "Setup MIT basics? (y/n)"
+read MIT
+
 echo "Are all above Selections Correct? (y/n)"
 read Correct
 
@@ -56,6 +59,10 @@ then
   if [ "$Databases" == "y" ];
   then
     ./Basics/DatabaseBasics.sh
+  fi
+  if [ "$MIT" == "y" ];
+  then
+    ./Basics/MitBasics.sh
   fi
 else
   echo "Restarting Process."
