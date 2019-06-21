@@ -7,5 +7,6 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update -y
 sudo apt-get install yarn -y
 sudo apt-get install --no-install-recommends yarn -y
-echo "export PATH=$PATH:`yarn global bin`" >> ~/.bashrc
+echo "# Add Yarn global bin to path" >> ~/.bashrc
+echo 'export PATH="$PATH:`yarn global bin`"' >> ~/.bashrc
 echo "Yarn Install Complete"
