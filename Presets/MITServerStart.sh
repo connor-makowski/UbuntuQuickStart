@@ -9,3 +9,8 @@ echo "Server Quickstart" | tee -a ~/StartLog.txt
 ./ShellScripts/Python/Python3Default.sh
 ./ShellScripts/Python/VirtualenvQuickAccess.sh
 ./ShellScripts/Editors/InstallAtom.sh
+
+
+./ShellScripts/Databases/MySQL.sh
+./ShellScripts/Databases/Postgresql.sh
+./ShellScripts/NodeJs/InstallYarn.sh
