@@ -26,13 +26,13 @@ fi
 
 if [ "$QSMod" == "2" ];
 then
-  echo "Ubuntu Quickstart? (y/n)"
+  echo "Generic Ubuntu Quickstart? (y/n)"
   read confirm
 
   if [ "$confirm" == "y" ];
   then
     echo "Running Ubuntu Quickstart"
-    ./Presets/UbuntuStart.sh
+    ./Presets/GenericStart.sh
   else
     echo "Restarting Process"
     ./QuickStart.sh

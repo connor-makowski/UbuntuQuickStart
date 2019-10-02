@@ -65,4 +65,6 @@ fi
 echo "To use your git credentials, you need to copy your public key(s)"
 echo "over to github in your personal section under the ssh tab."
 echo "These keys can be found in ~/.ssh"
+echo "If you are not using multiple git accounts this key is currently"
+echo "copied to your local clipboard."
 exit 1

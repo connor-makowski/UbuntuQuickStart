@@ -6,8 +6,13 @@
 echo "What is your gurobi key?"
 read gurobikey
 
-./AutoGurobi.sh
-export PATH=$PATH:/opt/gurobi810/linux64/bin
+echo '' >> ~/.bashrc
+echo '# Setup Gurobi Environment Variables' >> ~/.bashrc
+echo 'export GUROBI_HOME="/opt/gurobi810/linux64"' >> ~/.bashrc
+echo 'export PATH="${PATH}:${GUROBI_HOME}/bin"' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"' >> ~/.bashrc
+
+source ~/.bashrc
 
 cd /opt
 tar xvzf gurobi8.1.0_linux64.tar.gz
