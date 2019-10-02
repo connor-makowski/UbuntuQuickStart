@@ -11,9 +11,6 @@ read NodeJS
 echo "Will you use python36? (y/n)"
 read Py36
 
-echo "Setup WSL Aliases? (y/n)"
-read WSL
-
 echo "Setup Remote services for XRDP and SSH? (y/n)"
 read Remote
 
