@@ -21,9 +21,4 @@ echo '' >> ~/.ssh/config
 echo 'Host github.com' >> ~/.ssh/config
 echo 'HostName github.com' >> ~/.ssh/config
 echo 'PreferredAuthentications publickey' >> ~/.ssh/config
-echo 'IdentityFile ~/.ssh/id_rsa_work' >> ~/.ssh/config
-echo '' >> ~/.ssh/config
-echo 'Host github.mit.edu' >> ~/.ssh/config
-echo 'HostName github.mit.edu' >> ~/.ssh/config
-echo 'PreferredAuthentications publickey' >> ~/.ssh/config
-echo 'IdentityFile ~/.ssh/id_rsa_work' >> ~/.ssh/config
+echo 'IdentityFile ~/.ssh/id_rsa_personal' >> ~/.ssh/config
